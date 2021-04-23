@@ -1,14 +1,15 @@
 import * as React from "react";
 import { NavigationContainer, DrawerActions } from "@react-navigation/native";
-import HomeScreen from "../mobile-app/screens/HomeScreen";
-import RegisterScreen from "../mobile-app/screens/RegisterScreen";
-import SesionScreen from "../mobile-app/screens/SesionScreen";
+import HomeScreen from "./screens/HomeScreen";
+import RegisterScreen from "./screens/RegisterScreen";
+import SesionScreen from "./screens/SesionScreen";
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
   DrawerItemList,
   DrawerItem,
 } from "@react-navigation/drawer";
+import { GalleryScreen } from "./screens/GalleryScreen";
 
 const Drawer = createDrawerNavigator();
 
