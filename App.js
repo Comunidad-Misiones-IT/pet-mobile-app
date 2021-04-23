@@ -1,8 +1,8 @@
 import * as React from "react";
 import { NavigationContainer, DrawerActions } from "@react-navigation/native";
-import HomeScreen from "../mobile-app/screens/HomeScreen";
-import RegisterScreen from "../mobile-app/screens/RegisterScreen";
-import SesionScreen from "../mobile-app/screens/SesionScreen";
+import HomeScreen from "./screens/Home/HomeScreen";
+import RegisterScreen from "./screens/RegisterScreen";
+import SessionScreen from "./screens/SessionScreen";
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -31,7 +31,7 @@ function NotificationsScreen() {
     >
       <Drawer.Screen name="Bienvenida" component={HomeScreen} />
       <Drawer.Screen name="Registro" component={RegisterScreen} />
-      <Drawer.Screen name="Inicio de sesión" component={SesionScreen} />
+      <Drawer.Screen name="Inicio de sesión" component={SessionScreen} />
     </Drawer.Navigator>
   );
 }
