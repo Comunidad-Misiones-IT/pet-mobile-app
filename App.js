@@ -9,7 +9,6 @@ import {
   DrawerItemList,
   DrawerItem,
 } from "@react-navigation/drawer";
-import { GalleryScreen } from "./screens/GalleryScreen";
 
 const Drawer = createDrawerNavigator();
 
