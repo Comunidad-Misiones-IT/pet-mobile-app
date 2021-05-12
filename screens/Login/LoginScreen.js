@@ -7,7 +7,7 @@ import { Controller, useForm } from "react-hook-form";
 import Input from '../../core/components/Input/Input';
 import { styles } from './styles';
 // import { Icon } from 'react-native-vector-icons/Icon';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { EvilIcons, AntDesign, Ionicons } from '@expo/vector-icons';
 
 export default function LoginScreen({ navigation }) {
 
@@ -90,13 +90,27 @@ export default function LoginScreen({ navigation }) {
                 {/* </form> */}
             </View>
             <View style={styles.social}>
-                <Button
-                    onPress={handleFBLoginPress}
-                    title="Facebook" />
-                    <Icon name="rocket" size={30} color="#900" />
-                <Button
-                    onPress={handleGoogleLoginPress}
-                    title="Google" />
+                <View style={{marginTop: 16}}>
+                    <EvilIcons.Button
+                        style={styles.loginFacebook}
+                        name="sc-facebook"
+                        size={24}
+                        color="white"
+                        onPress={handleFBLoginPress}>
+                        <Text style={{...styles.loginGoogleText, color: '#FFF'}}>Login with Facebook</Text>
+                    </EvilIcons.Button>
+                </View>
+                <View style={{marginTop: 16}}>
+                    <Ionicons.Button
+                        backgroundColor="white"
+                        style={styles.loginGoogle}
+                        name="logo-google"
+                        color="black"
+                        size={22}
+                        onPress={handleGoogleLoginPress}>
+                        <Text style={styles.loginGoogleText}>Login with Google</Text>
+                    </Ionicons.Button>
+                </View>
             </View>
         </View>
     )

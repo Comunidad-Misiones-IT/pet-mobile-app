@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
         paddingVertical: 4,
         color: '#0d0c22',
-        backgroundColor: '#f3f3f4',
+        backgroundColor: colors.lightGrey,
         // '&.error': {
         //     borderColor: colors.red
         // }

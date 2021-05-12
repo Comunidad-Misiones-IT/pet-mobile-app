@@ -10,6 +10,7 @@ import {
   DrawerItemList,
   DrawerItem,
 } from "@react-navigation/drawer";
+import { AppearanceProvider } from "react-native-appearance";
 
 const Drawer = createDrawerNavigator();
 
@@ -39,8 +40,10 @@ function NotificationsScreen() {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <NotificationsScreen />
-    </NavigationContainer>
+    <AppearanceProvider>
+      <NavigationContainer>
+        <NotificationsScreen />
+      </NavigationContainer>
+    </AppearanceProvider>
   );
 }

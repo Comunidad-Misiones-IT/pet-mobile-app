@@ -27,6 +27,21 @@ const styles = StyleSheet.create({
         //     margin- top: 16px;
         // }
         // display: block;
+    },
+    loginGoogle: {
+        // marginTop: 12,
+        justifyContent: 'center'
+    },
+    loginGoogleText: {
+        textAlign: 'center',
+        color: colors.dark,
+        fontSize: 16,
+        backgroundColor: 'transparent'
+    },
+    loginFacebook: {
+        backgroundColor: '#3b5998',
+        // marginTop: 12,
+        justifyContent: 'center'
     }
 });
 
