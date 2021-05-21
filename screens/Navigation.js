@@ -1,8 +1,8 @@
 import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "./HomeScreen";
+import HomeScreen from "./Home/HomeScreen";
 import RegisterScreen from "./RegisterScreen";
-import SesionScreen from "./SesionScreen";
+import SessionScreen from "./SessionScreen";
 
 export default function NavigationComponent() {
   const Stack = createStackNavigator();
@@ -21,7 +21,7 @@ export default function NavigationComponent() {
       />
       <Stack.Screen
         name="Sesion"
-        component={SesionScreen}
+        component={SessionScreen}
         options={{ title: "Inicio de sesión" }}
       />
     </Stack.Navigator>
