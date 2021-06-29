@@ -1,6 +1,7 @@
 import * as React from "react";
 import { NavigationContainer, DrawerActions } from "@react-navigation/native";
 import HomeScreen from "./screens/Home/HomeScreen";
+import LoginScreen from "./screens/Login/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import SessionScreen from "./screens/SessionScreen";
 import {
@@ -9,6 +10,7 @@ import {
   DrawerItemList,
   DrawerItem,
 } from "@react-navigation/drawer";
+import { AppearanceProvider } from "react-native-appearance";
 
 const Drawer = createDrawerNavigator();
 
@@ -31,15 +33,17 @@ function NotificationsScreen() {
     >
       <Drawer.Screen name="Bienvenida" component={HomeScreen} />
       <Drawer.Screen name="Registro" component={RegisterScreen} />
-      <Drawer.Screen name="Inicio de sesión" component={SessionScreen} />
+      <Drawer.Screen name="Inicio de sesión" component={LoginScreen} />
     </Drawer.Navigator>
   );
 }
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <NotificationsScreen />
-    </NavigationContainer>
+    <AppearanceProvider>
+      <NavigationContainer>
+        <NotificationsScreen />
+      </NavigationContainer>
+    </AppearanceProvider>
   );
 }

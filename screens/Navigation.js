@@ -2,13 +2,13 @@ import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./Home/HomeScreen";
 import RegisterScreen from "./RegisterScreen";
-import SessionScreen from "./SessionScreen";
+import LoginScreen from "./Login/LoginScreen";
 
 export default function NavigationComponent() {
   const Stack = createStackNavigator();
 
   return (
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator initialRouteName="Login">
       <Stack.Screen
         name="Home"
         component={HomeScreen}
@@ -20,8 +20,8 @@ export default function NavigationComponent() {
         options={{ title: "Registro" }}
       />
       <Stack.Screen
-        name="Sesion"
-        component={SessionScreen}
+        name="Login"
+        component={LoginScreen}
         options={{ title: "Inicio de sesión" }}
       />
     </Stack.Navigator>

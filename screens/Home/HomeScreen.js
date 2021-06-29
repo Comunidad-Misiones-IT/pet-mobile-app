@@ -3,6 +3,7 @@ import { Button, View, Text, SafeAreaView, StyleSheet } from "react-native";
 import { DrawerActions } from "@react-navigation/native";
 import ItemCarousel from "./ItemCarousel";
 import Carousel, { Pagination } from "react-native-snap-carousel";
+import { colors } from "../../core/theme/colors";
 
 export default function HomeScreen({ navigation }) {
 
@@ -59,7 +60,7 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'rgba(185, 185, 225, 1)',
+    backgroundColor: colors.bgColor,
     flex: 1,
     paddingHorizontal: 20,
     paddingTop: 80,
